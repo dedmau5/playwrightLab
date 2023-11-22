@@ -2,14 +2,14 @@
 const { test, expect } = require('@playwright/test');
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  await page.goto('https://sites.google.com/squeed.com/intranet-of-things/hem?authuser=1');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveTitle(/Intranet of Things/);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('get links', async ({ page }) => {
+  await page.goto('https://sites.google.com/squeed.com/intranet-of-things/hem?authuser=1');
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
